@@ -1,0 +1,28 @@
+<div class="container">
+
+  <h1>login here</h1>
+<h3 style="background-color: red; " *ngIf=credential.error >bad credential , try again !</h3>
+<form  action="#" (ngSubmit)="dosub()">
+  <div class="example-container ">
+    <mat-form-field class="fw" appearance="outline">
+      <mat-label >Enter your email</mat-label>
+      <input matInput [(ngModel)]="credential.email" name="email" placeholder="pat@example.com"  required>
+    
+    </mat-form-field>
+  </div>
+
+  <div class="example-container ">
+    <mat-form-field class="fw" appearance="outline">
+      <mat-label>Enter your password</mat-label>
+      <input [(ngModel)]="credential.password" name="password" required matInput [type]="hide ? 'password' : 'text'">
+      <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+      </button>
+    </mat-form-field>
+</div>
+
+<button mat-raised-button color="primary" type="submit">Login</button> 
+<button style="margin: 5px;" mat-raised-button color="accent" (click)="foo()" type="reset">Reset</button> 
+</form>
+<a routerLink="/register">Register here </a>
+</div>

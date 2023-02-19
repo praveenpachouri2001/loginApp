@@ -1,0 +1,42 @@
+<div class="container">
+    <h1>Register </h1>
+    <h3 style="background-color: green; " *ngIf=success >Registration Successful , please login to access your account</h3>
+    <form class="my-form" (ngSubmit)="register()">
+        <div>
+       <mat-form-field class="full-width" appearance="outline">
+              <mat-label>First Name</mat-label>
+              <input  matInput [(ngModel)]="formData.fname" placeholder="First name"  name="fname"  required>
+           </mat-form-field>
+        </div>
+        <div>
+           <mat-form-field class="full-width" appearance="outline">
+              <mat-label>Last Name</mat-label>
+              <input  matInput [(ngModel)]="formData.lname" placeholder="Last Name" name="lname"  required>
+           </mat-form-field>
+        </div>
+        <div>
+           <mat-form-field class="full-width" appearance="outline">
+              <mat-label>Address</mat-label>
+              <input  matInput [(ngModel)]="formData.address"  placeholder="Address" name="address"  required>
+           </mat-form-field>
+        </div>
+        <div>
+           <mat-form-field class="full-width" appearance="outline">
+              <mat-label>Email</mat-label>
+              <input  matInput [(ngModel)]="formData.email" placeholder="Email" name="email" required>
+           </mat-form-field>
+        </div>
+        <div>
+           <mat-form-field class="full-width" appearance="outline">
+              <mat-label>Password</mat-label>
+              <input  matInput [(ngModel)]="formData.password" placeholder="Password"  name="password" required>
+           </mat-form-field>
+        </div>
+        <button mat-raised-button color="primary" type="submit">Register</button> 
+<button style="margin: 5px;" mat-raised-button color="accent" type="reset">Reset</button> 
+    </form>
+    <div>
+<p>Already have an Accout ?</p>
+<button mat-raised-button color="warn" routerLink="/login">Login</button> 
+</div>
+</div>

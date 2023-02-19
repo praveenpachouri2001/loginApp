@@ -1,0 +1,18 @@
+<mat-toolbar style="background-color: rgb(85, 85, 100); padding: 10px; ">
+    <button style="color: white;" mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon>menu</mat-icon>
+    </button>
+
+    <span style="margin-left:10px; color: white;">My App</span>
+    <span class="example-spacer"></span>
+   
+    <button  mat-raised-button class="example-icon  favorite-icon" aria-label="Example icon-button with heart icon">
+        <a routerLink="/">Home</a>
+      </button>
+      <button  mat-raised-button class="example-icon ml favorite-icon" aria-label="Example icon-button with heart icon">
+        <a routerLink="/login">login</a>
+      </button>
+      <button  mat-raised-button class="example-icon ml favorite-icon" aria-label="Example icon-button with heart icon" >
+       <a routerLink="/logout" >logout</a> 
+      </button>
+  </mat-toolbar>

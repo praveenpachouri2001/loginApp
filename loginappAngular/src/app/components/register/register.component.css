@@ -1,0 +1,15 @@
+.container{
+    text-align: center;
+    background-color: white;
+    width: 40%;
+    margin: auto;
+    padding: 20px;
+    margin-top: 50px;
+    border-radius: 10px;
+}
+.my-form{
+    margin: auto;
+  } 
+  .full-width {
+    width: 50%;
+  }
